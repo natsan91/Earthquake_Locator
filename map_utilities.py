@@ -1,14 +1,25 @@
+# The following code deals with a well-known issue about basemap being outdated
+# It involves basemap not pointing at the right environemental variables sometimes
+# The issue is summarized here: https://github.com/conda-forge/basemap-feedstock/issues/30
+# This workaround should work with a generic anaconda build
+import os
+cpath=os.getenv('CONDA_PREFIX')
+os.environ["PROJ_LIB"]=cpath+"\Library\share"
+# Import basemap
+from mpl_toolkits.basemap import Basemap
+# Import other relevant plotting utilities
+import matplotlib.pyplot as plt
+import warnings
+import matplotlib.cbook
+from matplotlib.patches import Ellipse
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
+
 def makemap(stat_lats,stat_lons,stat_names,lonc,latc,lon_delt,lat_delt,
             itq=False,iterate=0,i_lons=0,i_lats=0):
-# =============================================================================
-    import os
-    os.environ["PROJ_LIB"] = "C:\\Users\\natha\\Anaconda3\\Library\\share"; #fixr
-# =============================================================================
-    from mpl_toolkits.basemap import Basemap
-    import matplotlib.pyplot as plt
-    import warnings
-    import matplotlib.cbook
-    warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
+    # Plots the map on a supplied axis
+    # allows for plotting of stations via stat_ variables
+    # lonc,latc are center of map with lon_delt,lat_delt radial distances
+    # Optional arguments allow for plotting of iterated guesses at epicenter
     
     # Create map (static boundaries match random initial guess bounds)
     m = Basemap(llcrnrlon=lonc-lon_delt,llcrnrlat=latc-lat_delt,
@@ -42,20 +53,15 @@ def makemap(stat_lats,stat_lons,stat_names,lonc,latc,lon_delt,lat_delt,
             m.scatter(xx,yy,marker='D',color='r')
         xcurr, ycurr = m(i_lons[iterate],i_lats[iterate])
         m.scatter(xcurr,ycurr,marker='D',color='b')
-        mytitle='After '+str(iterate)+' Iterations'    
+        mytitle='After '+str(iterate)+' Iterations'
+    else:
+        mytitle='Map of seismic stations'
     plt.title(mytitle)
     
 def final_map(lonc,latc,sem1,sem2,rot=0,time=0,tstd=0):
-# =============================================================================
-    import os
-    os.environ["PROJ_LIB"] = "C:\\Users\\natha\\Anaconda3\\Library\\share"; #fixr
-# =============================================================================
-    from mpl_toolkits.basemap import Basemap
-    import matplotlib.pyplot as plt
-    import warnings
-    import matplotlib.cbook
-    from matplotlib.patches import Ellipse
-    warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
+    # plots the final answer from the iteration on a tight axis around the 
+    # epicentral location
+    # additionally adds an error ellipse based on supplied values
     
     # Create map (static boundaries match random initial guess bounds)
     m = Basemap(llcrnrlon=lonc-3.,llcrnrlat=latc-2.,urcrnrlon=lonc+3.,
