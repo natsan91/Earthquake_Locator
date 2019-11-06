@@ -11,14 +11,16 @@ at NU and instructor for the course.
 The data consists of arrival time data at a series of 12 seismic stations in the southeastern US.
 The locations and elevations of the stations were also given and provided the basis for a least-
 squares iteration process to find the hypocenter. The mathematical details are contained in 
-[these notes](../Earthquake_Locator/master/Earthquake_Inference.pdf), 
+[these notes](../Earthquake_Locator/master/Earthquake_Inference.pdf "Earthquake_Inference.pdf"), 
 but the main takeaway from this project for me was learning plotting 
 tools in Python. I used [Basemap](https://matplotlib.org/basemap/), 
 a Python mapping utility, to plot the iteration process on a map 
 of the southeastern US in order to gain insight into the solution. In particular, a random initial 
 guess for the epicenter sometimes does not converge and the geographical  distribution of the 
 seismic stations provides insight as to why this is the case. An example of convergent iteration is
-included in Example_iteration.png where the initial guess (green), intermediate iterates (red), and 
+included seen here 
+![Example Iteration](../Earthquake_Locator/master/Example_iteration.png "Example Iteration") 
+where the initial guess (green), intermediate iterates (red), and 
 final iterate (blue) are shown on a map with the locations of the stations shown as well.
 
 At the end of the iteration, which is achieved when the hypocenter changes are less than a 
@@ -28,6 +30,6 @@ is computed assuming that the input data have a standard error of 0.8s in each o
 
 ## A note on Basemap
 
-Basemap is now deprecated in favor of another package called [cartopy](https://scitools.org.uk/cartopy/docs/latest/). 
+Basemap is now deprecated in favor of another package called [cartopy](https://scitools.org.uk/cartopy/docs/latest/ ). 
 Instead of updating this code to use cartopy I kept basemap but added a few workarounds for known issues. The code here 
 using basemap is intended for use with anaconda3 and may not work with other flavors of python.
