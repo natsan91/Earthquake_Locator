@@ -19,14 +19,18 @@ of the southeastern US in order to gain insight into the solution. In particular
 guess for the epicenter sometimes does not converge and the geographical  distribution of the 
 seismic stations provides insight as to why this is the case. An example of convergent iteration is
 included seen here 
-![Example Iteration](https://github.com/natsan91/Earthquake_Locator/blob/master/Example_iteration.png "Example Iteration")
+
+![Example Iteration](https://github.com/natsan91/Earthquake_Locator/blob/master/Example_iteration.png "Example with 5 iterations")
+
 where the initial guess (green), intermediate iterates (red), and 
 final iterate (blue) are shown on a map with the locations of the stations shown as well.
 
 At the end of the iteration, which is achieved when the hypocenter changes are less than a 
 prescribed tolerance, uncertainty information in the solution is displayed in the form of an error
-ellipse. Output of a converged solution with an error ellipse is shown in Example_zoomed.png. This 
-is computed assuming that the input data have a standard error of 0.8s in each observation.
+ellipse. Output of a converged solution with an error ellipse is that is computed assuming that the input 
+data have a standard error of 0.8s in each observation.
+
+![Final answer](https://github.com/natsan91/Earthquake_Locator/blob/master/Example_zoomed.png "Final answer with error ellipse")
 
 ## A note on Basemap
 
