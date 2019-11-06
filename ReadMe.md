@@ -24,7 +24,7 @@ prescribed tolerance, uncertainty information in the solution is displayed in th
 ellipse. Output of a converged solution with an error ellipse is shown in Example_zoomed.png. This 
 is computed assuming that the input data have a standard error of 0.8s in each observation.
 
-##A note on Basemap
+## A note on Basemap
 
 Basemap is now deprecated in favor of another package called cartopy. Instead of updating this
 code to use cartopy I kept basemap but added a few workarounds for known issues. The code here 
