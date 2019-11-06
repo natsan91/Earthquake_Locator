@@ -30,7 +30,7 @@ final iterate (blue) are shown on a map with the locations of the stations shown
 At the end of the iteration, which is achieved when the hypocenter changes are less than a 
 prescribed tolerance, uncertainty information in the solution is displayed in the form of an error
 ellipse. Output of a converged solution with an error ellipse is that is computed assuming that the input 
-data have a standard error of 0.8s in each observation.
+data have a standard error of 0.8s in each observation. The t value is seconds relative to a reference time used by all of the stations.
 
 ![Final answer](https://github.com/natsan91/Earthquake_Locator/blob/master/Example_zoomed.png "Final answer with error ellipse")
 
