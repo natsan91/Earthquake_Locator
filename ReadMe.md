@@ -1,3 +1,4 @@
+# Earthquake Location Inference
 Written by Nathan Sanford for Data Science 422 (inverse methods) at Northwestern in February 2017.
 
 This short project takes data obtained from the Earthscope USArray system of earthquake detectors
