@@ -1,7 +1,9 @@
 # Earthquake Location Inference
 Written by Nathan Sanford for Data Science 422 (inverse methods) at Northwestern in February 2017.
 
-This short project takes data obtained from the Earthscope USArray system of earthquake detectors
+![Station Map](https://github.com/natsan91/Earthquake_Locator/blob/master/SeismicStationMap.png "Stations used")
+
+This short project takes data obtained from the [Earthscope USArray](http://www.usarray.org/) system of earthquake detectors
 and infers the hypocenter (or epicenter and origin time) of an earthquake from the times it took 
 to reach a series of detectors. This process is sometimes called "triangulation," but is more 
 properly called "multilateration" as more than three detectors are used. The data was obtained for 
