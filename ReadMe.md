@@ -11,7 +11,7 @@ at NU and instructor for the course.
 The data consists of arrival time data at a series of 12 seismic stations in the southeastern US.
 The locations and elevations of the stations were also given and provided the basis for a least-
 squares iteration process to find the hypocenter. The mathematical details are contained in 
-[Earthquake_Inference.pdf], but the main takeaway from this project for me was learning plotting 
+[../Earthquake_Locator/master/Earthquake_Inference.pdf], but the main takeaway from this project for me was learning plotting 
 tools in Python. I used Basemap, a Python mapping utility, to plot the iteration process on a map 
 of the southeastern US in order to gain insight into the solution. In particular, a random initial 
 guess for the epicenter sometimes does not converge and the geographical  distribution of the 
