@@ -24,8 +24,8 @@ included seen here
 
 ![Example Iteration](https://github.com/natsan91/Earthquake_Locator/blob/master/Example_iteration.png "Example with 5 iterations")
 
-where the initial guess (green), intermediate iterates (red), and 
-final iterate (blue) are shown on a map with the locations of the stations shown as well.
+where the random initial guess (green), intermediate iterates (red), and 
+current iterate (blue) are shown on a map with the locations of the stations shown as well.
 
 At the end of the iteration, which is achieved when the hypocenter changes are less than a 
 prescribed tolerance, uncertainty information in the solution is displayed in the form of an error
