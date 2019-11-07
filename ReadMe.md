@@ -11,8 +11,8 @@ the class by Dr. Suzan van der Lee, Professor in the Department of Earth and Pla
 at NU and instructor for the course.
 
 The data consists of arrival time data at a series of 12 seismic stations in the southeastern US.
-The locations and elevations of the stations were also given and provided the basis for a least-
-squares iteration process to find the hypocenter. The mathematical details are contained in 
+The locations and elevations of the stations were also given and provided the basis for a least-squares iteration process to
+find the hypocenter. The mathematical details are contained in 
 [these notes](https://github.com/natsan91/Earthquake_Locator/blob/master/Earthquake_Inference.pdf "Earthquake_Inference.pdf"), 
 but the main takeaway from this project for me was learning plotting 
 tools in Python. I used [Basemap](https://matplotlib.org/basemap/), 
