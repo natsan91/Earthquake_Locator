@@ -1,5 +1,5 @@
 # Earthquake Location Inference
-Written by Nathan Sanford for Data Science 422 (inverse methods) at Northwestern in February 2017.
+This project was created for Data Science 422 (inverse methods) at Northwestern in February 2017.
 
 ![Station Map](https://github.com/natsan91/Earthquake_Locator/blob/master/SeismicStationMap.png "Stations used")
 
